@@ -2,16 +2,6 @@
 
 <body>
   <section id="container">
-    <header class="clearfix">
-      <div class="page-header">
-        <h1><%= link_to 'Флэшкарточкер', root_path %> </h1>
-      </div>
-      <ul class="nav nav-pills nav-justified">
-        <li class="active"><%= link_to 'Все карточки', cards_path %></li>
-        <li><%= link_to 'Добавить карточку', new_card_path%></li>
-      </ul>
-    </header>
-
     <div class="list-group">
       <a class="list-group-item disabled">Карточка № <%= @card.id %></a>
       <a class="list-group-item"><%= @card.original_text %></a>

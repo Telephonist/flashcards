@@ -2,15 +2,6 @@
 
 <body>
   <section id="container">
-    <header class="clearfix">
-      <div class="page-header">
-        <h1><%= link_to 'Флэшкарточкер', root_path %> </h1>
-      </div>
-      <ul class="nav nav-pills nav-justified">
-        <li><%= link_to 'Все карточки', cards_path %></li>
-        <li class="active"><%= link_to 'Добавить карточку' %></li>
-      </ul>
-    </header>
 
     <%= simple_form_for(@card, html: { class: '.form-horizontal'}) do |f| %>
 

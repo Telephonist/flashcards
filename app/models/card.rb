@@ -10,7 +10,7 @@ class Card < ApplicationRecord
   def check_original_text_and_translated_text
     errors.add(:translated_text, "не могут быть одинаковыми", case_) if original_text == translated_text
   end
-  
+
   before_create do
     self.review_date = Date.today + 3.days
   end
