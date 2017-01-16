@@ -1,0 +1,15 @@
+<% provide(:title, 'Add a new card') %>
+
+<body>
+  <section id="container">
+
+    <%= simple_form_for(@card, html: { class: '.form-horizontal'}) do |f| %>
+
+        <%= f.input :original_text, label: 'Введите слово на английском', error: 'Слово введено некоректно' %>
+        <%= f.input :translated_text, label: 'Введите перевод слова', error: 'Перевод введен некоректно' %>
+        <%= f.input :review_date, :as => :hidden %>
+        <%= f.button :submit %>
+    <% end %>
+
+  </section>
+</body>

@@ -2,17 +2,6 @@
 
 <body>
 <section id="container">
-
-  <header class="clearfix">
-    <div class="page-header">
-      <h1><%= link_to 'Флэшкарточкер', root_path %> </h1>
-    </div>
-
-    <ul class="nav nav-pills nav-justified">
-      <li class="active"><%= link_to 'Все карточки', cards_path %></li>
-      <li><a href="#">Добавить карточку</a></li>
-    </ul>
-  </header>
     <div class="panel panel-default">
       <div class="panel-heading">ВСЕ КАРТОЧКИ</div>
       <div class="panel-body">
@@ -25,25 +14,23 @@
       <th>Original text</th>
       <th>Translated text</th>
       <th>Review date</th>
-      <th colspan="2">Тут можно будет что-то сделать с карточками потом:</th>
+      <th colspan="3">Тут можно будет что-то сделать с карточками потом:</th>
     </tr>
     </thead>
     <tbody>
     <% @cards.each do |cards| %>
         <tr>
           <td><%= cards.id %></td>
-          <td><%= cards.original_text %></td>
+          <td><%= link_to cards.original_text, card_path(cards.id) %></td>
           <td><%= cards.translated_text %></td>
           <td><%= cards.review_date %></td>
-          <td>Редактировать</td>
-          <td>Удалить</td>
+          <td><%= link_to 'Редактировать карточку', edit_card_path(cards.id) %></td>
+          <td><%= link_to 'Удалить карточку', card_path(cards.id),
+            method: :delete,
+            data: { confirm: 'Вы уверены?' } %></td>
         </tr>
     <% end %>
     </tbody>
   </table>
-
-
-
-
 </section>
 </body>
