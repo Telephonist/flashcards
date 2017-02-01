@@ -6,6 +6,11 @@
   <section>
     <div class="well well-lg"><p style="font-size: 22px;"; align="center"; vertical-align="middle">Первый в мире удобный менеджер флеш-карточек. Именно так.</p></div>
   </section>
+  <%= simple_form_for('check_translation_path', html: { class: '.form-horizontal'}) do |f| %>
+      <%= f.input :user_input, label: 'Input original text:', error: 'incorrect' %>
+      <%= f.input :id, :as => :hidden  %>
+      <%= f.button :submit, "Check" %>
+  <% end %>
 
 </section>
 </body>
