@@ -5,9 +5,6 @@ class WelcomeController < ApplicationController
   end
 
   def check_translation
-    puts params[:user_input]
-    puts params[:id]
-    puts params[:review_date]
     @card = Card.find(params[:id])
     user_input = params[:user_input]
     if @card.translated_text ==  user_input
