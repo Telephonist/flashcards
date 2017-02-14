@@ -20,6 +20,9 @@
         </ul>
       </header>
       <%= yield %>
+      <% flash.each do |name, value| %>
+          <%= content_tag :div, value, class: name %>
+      <% end %>
     </section>
   </body>
 </html>

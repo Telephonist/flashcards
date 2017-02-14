@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   post 'check_translation' => 'welcome#check_translation'
 
   resources :cards, only: [:index, :show, :new, :edit, :create, :update, :destroy]
-
 end
