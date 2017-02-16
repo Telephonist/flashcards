@@ -7,5 +7,18 @@
     <div class="well well-lg"><p style="font-size: 22px;"; align="center"; vertical-align="middle">Первый в мире удобный менеджер флеш-карточек. Именно так.</p></div>
   </section>
 
+  <% if @card.present? %>
+      <%= form_tag(check_translation_path, method: :post, html: { class: '.form-horizontal'}) do |f| %>
+          <%= field_set_tag @card.original_text %>
+          <%= text_field_tag :user_input %>
+          <%= hidden_field_tag :id, @card.id %>
+          <%= hidden_field_tag :translated_text, @card.translated_text %>
+          <%= hidden_field_tag :review_date, @card.review_date %>
+          <%= submit_tag "Проверить", type: "submit" %>
+      <% end %>
+  <% else %>
+      <p>Нет карточек!</p>
+  <% end %>
+
 </section>
 </body>
