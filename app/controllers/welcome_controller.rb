@@ -6,13 +6,13 @@ class WelcomeController < ApplicationController
 
   def check_translation
     @card = Card.find(params[:id])
-    user_input = params[:user_input]
-    if @card.translated_text ==  user_input
-      @card.update("review_date" => Date.today + 5.days)
+    if @card.right_translation(params[:user_input])
+      @card.update_review_date
       flash[:notice] = "=)"
+      redirect_to root_path
     else
       flash[:alert] = "=("
+      redirect_to root_path
     end
-    redirect_to root_path
   end
 end
