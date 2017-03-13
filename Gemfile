@@ -38,6 +38,7 @@ group :development, :test do
   # gem rspec-rails for test, gem factory_girl for setting up Ruby objects as test data
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails'
+  gem 'capybara'
 
 end
 

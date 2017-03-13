@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :card do
-    original_text "streik"
-    translated_text "strike"
+    original_text "regenbogen"
+    translated_text "reinbow"
   end
 end
 
