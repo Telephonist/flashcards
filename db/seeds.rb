@@ -10,12 +10,7 @@ require 'rubygems'
 require 'open-uri'
 require 'nokogiri'
 
-url = 'http://www.languagedaily.com/learn-german/vocabulary/common-german-words'
-html = open(url)
-
-doc = Nokogiri::HTML(html)
-
-page = Nokogiri::HTML(open("http://www.languagedaily.com/learn-german/vocabulary/common-german-words"))
+doc = Nokogiri::HTML(open("http://www.languagedaily.com/learn-german/vocabulary/common-german-words"))
 
 germans = doc.css('td.bigLetter')
 germans.each do |german|
