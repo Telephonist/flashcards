@@ -18,3 +18,19 @@ Style/NumericLiterals:
 
 Lint/AssignmentInCondition:
   Enabled: false
+
+Style/IndentationConsistency:
+  EnforcedStyle: rails
+
+Style/BlockLength:
+  Exclude:
+    - 'config/initializers/simple_form_bootstrap.rb'
+
+Style/AlignHash:
+  Exclude:
+    - 'config/initializers/simple_form.rb'
+
+Style/BlockComments:
+  Description: 'Do not use block comments.'
+  StyleGuide: '#no-block-comments'
+  Enabled: false

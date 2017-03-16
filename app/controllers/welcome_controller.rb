@@ -9,10 +9,9 @@ class WelcomeController < ApplicationController
     if @card.right_translation(params[:user_input])
       @card.update_review_date
       flash[:notice] = "=)"
-      redirect_to root_path
     else
       flash[:alert] = "=("
-      redirect_to root_path
     end
+    redirect_to root_path
   end
 end
