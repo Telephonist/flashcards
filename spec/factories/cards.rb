@@ -4,4 +4,3 @@ FactoryGirl.define do
     translated_text "reinbow"
   end
 end
-
